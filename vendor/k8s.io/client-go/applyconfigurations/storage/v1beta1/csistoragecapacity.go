@@ -46,7 +46,7 @@ func CSIStorageCapacity(name, namespace string) *CSIStorageCapacityApplyConfigur
 	b.WithName(name)
 	b.WithNamespace(namespace)
 	b.WithKind("CSIStorageCapacity")
-	b.WithAPIVersion("storage.k8s.io/v1beta1")
+	b.WithAPIVersion("storage.k8s.io/v1")
 	return b
 }
 
@@ -71,7 +71,7 @@ func ExtractCSIStorageCapacity(cSIStorageCapacity *v1beta1.CSIStorageCapacity, f
 	b.WithNamespace(cSIStorageCapacity.Namespace)
 
 	b.WithKind("CSIStorageCapacity")
-	b.WithAPIVersion("storage.k8s.io/v1beta1")
+	b.WithAPIVersion("storage.k8s.io/v1")
 	return b, nil
 }
 
